@@ -85,7 +85,7 @@ By using this cmdlet with one of these services, you agree to the service's own 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: ip6.me, MyIP
+Accepted values: ipify, ip6.me, MyIP
 
 Required: False
 Position: Named

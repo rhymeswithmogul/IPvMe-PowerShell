@@ -30,6 +30,7 @@ PS C:\> Get-WANIPAddress -IPv6Only
 
 Because some people like to have a choice, this module supports multiple IP-finding services:
 * IP6.me (default)
+* IPify
 * MyIP
 
 More may be supported in future releases.

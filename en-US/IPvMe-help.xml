@@ -1,169 +1,171 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <helpItems schema="maml" xmlns="http://msh">
-	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
-		<command:details>
-			<command:name>Get-WanIpAddress</command:name>
-			<command:verb>Get</command:verb>
-			<command:noun>WanIpAddress</command:noun>
-			<maml:description>
-				<maml:para>Find your public IPv4 and/or IPv6 address.</maml:para>
-			</maml:description>
-		</command:details>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+	<command:details>
+	  <command:name>Get-WanIpAddress</command:name>
+	  <command:verb>Get</command:verb>
+	  <command:noun>WanIpAddress</command:noun>
+	  <maml:description>
+		<maml:para>Find your public IPv4 and/or IPv6 address.</maml:para>
+	  </maml:description>
+	</command:details>
+	<maml:description>
+	  <maml:para>This cmdlet will connect to an Internet service in order to find your device's WAN IPv4 and/or IPv6 addresses.</maml:para>
+	</maml:description>
+	<command:syntax>
+	  <command:syntaxItem>
+		<maml:name>Get-WanIpAddress</maml:name>
+		<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		  <maml:name>IPv4Only</maml:name>
+		  <maml:description>
+			<maml:para>Return only the computer's IPv4 address.</maml:para>
+		  </maml:description>
+		  <dev:type>
+			<maml:name>SwitchParameter</maml:name>
+			<maml:uri />
+		  </dev:type>
+		  <dev:defaultValue>False</dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		  <maml:name>Service</maml:name>
+		  <maml:description>
+			<maml:para>By default, this cmdlet will connect to the website ip6.me to find this device's WAN IP address.  However, if you would prefer to use another service, you may specify it here.</maml:para>
+			<maml:para>By using this cmdlet with one of these services, you agree to the service's own terms of use.</maml:para>
+		  </maml:description>
+		  <command:parameterValueGroup>
+			<command:parameterValue required="false" command:variableLength="false">ipify</command:parameterValue>
+			<command:parameterValue required="false" command:variableLength="false">ip6.me</command:parameterValue>
+			<command:parameterValue required="false" command:variableLength="false">MyIP</command:parameterValue>
+		  </command:parameterValueGroup>
+		  <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+		  <dev:type>
+			<maml:name>String</maml:name>
+			<maml:uri />
+		  </dev:type>
+		  <dev:defaultValue>None</dev:defaultValue>
+		</command:parameter>
+	  </command:syntaxItem>
+	  <command:syntaxItem>
+		<maml:name>Get-WanIpAddress</maml:name>
+		<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		  <maml:name>IPv6Only</maml:name>
+		  <maml:description>
+			<maml:para>Return only the computer's IPv6 address.</maml:para>
+		  </maml:description>
+		  <dev:type>
+			<maml:name>SwitchParameter</maml:name>
+			<maml:uri />
+		  </dev:type>
+		  <dev:defaultValue>False</dev:defaultValue>
+		</command:parameter>
+		<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		  <maml:name>Service</maml:name>
+		  <maml:description>
+			<maml:para>By default, this cmdlet will connect to the website ip6.me to find this device's WAN IP address.  However, if you would prefer to use another service, you may specify it here.</maml:para>
+			<maml:para>By using this cmdlet with one of these services, you agree to the service's own terms of use.</maml:para>
+		  </maml:description>
+		  <command:parameterValueGroup>
+			<command:parameterValue required="false" command:variableLength="false">ipify</command:parameterValue>
+			<command:parameterValue required="false" command:variableLength="false">ip6.me</command:parameterValue>
+			<command:parameterValue required="false" command:variableLength="false">MyIP</command:parameterValue>
+		  </command:parameterValueGroup>
+		  <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+		  <dev:type>
+			<maml:name>String</maml:name>
+			<maml:uri />
+		  </dev:type>
+		  <dev:defaultValue>None</dev:defaultValue>
+		</command:parameter>
+	  </command:syntaxItem>
+	</command:syntax>
+	<command:parameters>
+	  <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		<maml:name>IPv4Only</maml:name>
 		<maml:description>
-			<maml:para>This cmdlet will connect to an Internet service in order to find your device's WAN IPv4 and/or IPv6 addresses.</maml:para>
+		  <maml:para>Return only the computer's IPv4 address.</maml:para>
 		</maml:description>
-		<command:syntax>
-			<command:syntaxItem>
-				<maml:name>Get-WanIpAddress</maml:name>
-				<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-					<maml:name>IPv4Only</maml:name>
-					<maml:description>
-						<maml:para>Return only the computer's IPv4 address.</maml:para>
-					</maml:description>
-					<dev:type>
-						<maml:name>SwitchParameter</maml:name>
-						<maml:uri />
-					</dev:type>
-					<dev:defaultValue>False</dev:defaultValue>
-				</command:parameter>
-				<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-					<maml:name>Service</maml:name>
-					<maml:description>
-						<maml:para>By default, this cmdlet will connect to the website ip6.me to find this device's WAN IP address.  However, if you would prefer to use another service, you may specify it here.</maml:para>
-						<maml:para>By using this cmdlet with one of these services, you agree to the service's own terms of use.</maml:para>
-					</maml:description>
-					<command:parameterValueGroup>
-						<command:parameterValue required="false" command:variableLength="false">ip6.me</command:parameterValue>
-						<command:parameterValue required="false" command:variableLength="false">MyIP</command:parameterValue>
-					</command:parameterValueGroup>
-					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-					<dev:type>
-						<maml:name>String</maml:name>
-						<maml:uri />
-					</dev:type>
-					<dev:defaultValue>None</dev:defaultValue>
-				</command:parameter>
-			</command:syntaxItem>
-			<command:syntaxItem>
-				<maml:name>Get-WanIpAddress</maml:name>
-				<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-					<maml:name>IPv6Only</maml:name>
-					<maml:description>
-						<maml:para>Return only the computer's IPv6 address.</maml:para>
-					</maml:description>
-					<dev:type>
-						<maml:name>SwitchParameter</maml:name>
-						<maml:uri />
-					</dev:type>
-					<dev:defaultValue>False</dev:defaultValue>
-				</command:parameter>
-				<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-					<maml:name>Service</maml:name>
-					<maml:description>
-						<maml:para>By default, this cmdlet will connect to the website ip6.me to find this device's WAN IP address.  However, if you would prefer to use another service, you may specify it here.</maml:para>
-						<maml:para>By using this cmdlet with one of these services, you agree to the service's own terms of use.</maml:para>
-					</maml:description>
-					<command:parameterValueGroup>
-						<command:parameterValue required="false" command:variableLength="false">ip6.me</command:parameterValue>
-						<command:parameterValue required="false" command:variableLength="false">MyIP</command:parameterValue>
-					</command:parameterValueGroup>
-					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-					<dev:type>
-						<maml:name>String</maml:name>
-						<maml:uri />
-					</dev:type>
-					<dev:defaultValue>None</dev:defaultValue>
-				</command:parameter>
-			</command:syntaxItem>
-		</command:syntax>
-		<command:parameters>
-			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-				<maml:name>IPv4Only</maml:name>
-				<maml:description>
-					<maml:para>Return only the computer's IPv4 address.</maml:para>
-				</maml:description>
-				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
-				<dev:type>
-					<maml:name>SwitchParameter</maml:name>
-					<maml:uri />
-				</dev:type>
-				<dev:defaultValue>False</dev:defaultValue>
-			</command:parameter>
-			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-				<maml:name>IPv6Only</maml:name>
-				<maml:description>
-					<maml:para>Return only the computer's IPv6 address.</maml:para>
-				</maml:description>
-				<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
-				<dev:type>
-					<maml:name>SwitchParameter</maml:name>
-					<maml:uri />
-				</dev:type>
-				<dev:defaultValue>False</dev:defaultValue>
-			</command:parameter>
-			<command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-				<maml:name>Service</maml:name>
-				<maml:description>
-					<maml:para>By default, this cmdlet will connect to the website ip6.me to find this device's WAN IP address.  However, if you would prefer to use another service, you may specify it here.</maml:para>
-					<maml:para>By using this cmdlet with one of these services, you agree to the service's own terms of use.</maml:para>
-				</maml:description>
-				<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-				<dev:type>
-					<maml:name>String</maml:name>
-					<maml:uri />
-				</dev:type>
-				<dev:defaultValue>None</dev:defaultValue>
-			</command:parameter>
-		</command:parameters>
-		<command:inputTypes>
-			<command:inputType>
-				<dev:type>
-					<maml:name>None</maml:name>
-				</dev:type>
-				<maml:description>
-					<maml:para>This cmdlet does not accept pipeline input.</maml:para>
-				</maml:description>
-			</command:inputType>
-		</command:inputTypes>
-		<command:returnValues>
-			<command:returnValue>
-				<dev:type>
-					<maml:name>System.Net.IPAddress[]</maml:name>
-				</dev:type>
-				<maml:description>
-					<maml:para>This cmdlet returns one or more IP addresses.</maml:para>
-				</maml:description>
-			</command:returnValue>
-		</command:returnValues>
-		<maml:alertSet>
-			<maml:alert>
-				<maml:para>If this computer has multiple Internet connections, the operating system will decide which one to use.  This is left up to the OS and is not configurable by this version of the cmdlet.</maml:para>
-				<maml:para>Also, if the computer has multiple IPv6 addresses, the same note applies;  the computer's default IPv6 address will be used.</maml:para>
-			</maml:alert>
-		</maml:alertSet>
-		<command:examples>
-			<command:example>
-				<maml:title>-------------------------- Example 1 --------------------------</maml:title>
-				<dev:code>PS C:\&gt; Get-WANIPAddress
+		<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+		<dev:type>
+		  <maml:name>SwitchParameter</maml:name>
+		  <maml:uri />
+		</dev:type>
+		<dev:defaultValue>False</dev:defaultValue>
+	  </command:parameter>
+	  <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		<maml:name>IPv6Only</maml:name>
+		<maml:description>
+		  <maml:para>Return only the computer's IPv6 address.</maml:para>
+		</maml:description>
+		<command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+		<dev:type>
+		  <maml:name>SwitchParameter</maml:name>
+		  <maml:uri />
+		</dev:type>
+		<dev:defaultValue>False</dev:defaultValue>
+	  </command:parameter>
+	  <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+		<maml:name>Service</maml:name>
+		<maml:description>
+		  <maml:para>By default, this cmdlet will connect to the website ip6.me to find this device's WAN IP address.  However, if you would prefer to use another service, you may specify it here.</maml:para>
+		  <maml:para>By using this cmdlet with one of these services, you agree to the service's own terms of use.</maml:para>
+		</maml:description>
+		<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+		<dev:type>
+		  <maml:name>String</maml:name>
+		  <maml:uri />
+		</dev:type>
+		<dev:defaultValue>None</dev:defaultValue>
+	  </command:parameter>
+	</command:parameters>
+	<command:inputTypes>
+	  <command:inputType>
+		<dev:type>
+		  <maml:name>None</maml:name>
+		</dev:type>
+		<maml:description>
+		  <maml:para>This cmdlet does not accept pipeline input.</maml:para>
+		</maml:description>
+	  </command:inputType>
+	</command:inputTypes>
+	<command:returnValues>
+	  <command:returnValue>
+		<dev:type>
+		  <maml:name>System.Net.IPAddress[]</maml:name>
+		</dev:type>
+		<maml:description>
+		  <maml:para>This cmdlet returns one or more IP addresses.</maml:para>
+		</maml:description>
+	  </command:returnValue>
+	</command:returnValues>
+	<maml:alertSet>
+	  <maml:alert>
+		<maml:para>If this computer has multiple Internet connections, the operating system will decide which one to use.  This is left up to the OS and is not configurable by this version of the cmdlet.</maml:para>
+		<maml:para>Also, if the computer has multiple IPv6 addresses, the same note applies;  the computer's default IPv6 address will be used.</maml:para>
+	  </maml:alert>
+	</maml:alertSet>
+	<command:examples>
+	  <command:example>
+		<maml:title>-------------------------- Example 1 --------------------------</maml:title>
+		<dev:code>PS C:\&gt; Get-WANIPAddress
 
 Type  IP Address
 ----  ----------
 IPv4  192.0.2.100
 IPv6  2001:db8::100</dev:code>
-				<dev:remarks>
-					<maml:para>Without any parameters, this cmdlet will connect to the default IP address reporting service and find the IPv4 and IPv6 addresses of the primary network interface.</maml:para>
-				</dev:remarks>
-			</command:example>
-		</command:examples>
-		<command:relatedLinks>
-			<maml:navigationLink>
-				<maml:linkText>Online Version:</maml:linkText>
-				<maml:uri>https://www.github.com/rhymeswithmogul/IPvMe-PowerShell/man/en-US/Get-WanIpAddress.md</maml:uri>
-			</maml:navigationLink>
-			<maml:navigationLink>
-				<maml:linkText>Get-NetIPAddress</maml:linkText>
-				<maml:uri></maml:uri>
-			</maml:navigationLink>
-		</command:relatedLinks>
-	</command:command>
+		<dev:remarks>
+		  <maml:para>Without any parameters, this cmdlet will connect to the default IP address reporting service and find the IPv4 and IPv6 addresses of the primary network interface.</maml:para>
+		</dev:remarks>
+	  </command:example>
+	</command:examples>
+	<command:relatedLinks>
+	  <maml:navigationLink>
+		<maml:linkText>Online Version:</maml:linkText>
+		<maml:uri>https://www.github.com/rhymeswithmogul/IPvMe-PowerShell/man/en-US/Get-WanIpAddress.md</maml:uri>
+	  </maml:navigationLink>
+	  <maml:navigationLink>
+		<maml:linkText>Get-NetIPAddress</maml:linkText>
+		<maml:uri></maml:uri>
+	  </maml:navigationLink>
+	</command:relatedLinks>
+  </command:command>
 </helpItems>

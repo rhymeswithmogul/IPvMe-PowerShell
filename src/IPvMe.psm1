@@ -1,5 +1,11 @@
 #Requires -Version 5.1
-New-Variable -Option 'Constant' -Name 'UserAgent' -Value "PowerShell/$($PSVersionTable.PSVersion) IPvMe/$((Get-Module -Name 'IPvMe').Version)"
+
+Function Get-UserAgent {
+	[OutputType([String])]
+	Param()
+
+	Return "PowerShell/$($PSVersionTable.PSVersion) IPvMe/$((Get-Module -Name 'IPvMe').Version)"
+}
 
 Function Get-WanIpAddress {
 	[CmdletBinding(DefaultParameterSetName='DualStack')]
@@ -12,7 +18,7 @@ Function Get-WanIpAddress {
 		[Parameter(ParameterSetName='IPv6Only')]
 		[Switch] $IPv6Only,
 
-		[ValidateSet('ip6.me', 'MyIP')]
+		[ValidateSet('ipify', 'ip6.me', 'MyIP')]
 		[String] $Service = 'ip6.me'
 	)
 
@@ -44,12 +50,12 @@ Function Invoke-ipify {
 	Try {
 		If ($AddressFamily = 'IPv4') {
 			$IPAddress = [IPAddress](
-				Invoke-RestMethod -Uri 'https://api.ipify.org' -UserAgent $UserAgent
+				Invoke-RestMethod -Uri 'https://api.ipify.org' -UserAgent (Get-UserAgent)
 			)
 		}
 		Else <# IPv6 #> {
 			$IPAddress = [IPAddress](
-				Invoke-RestMethod -Uri 'https://api64.ipify.org' -UserAgent $UserAgent
+				Invoke-RestMethod -Uri 'https://api64.ipify.org' -UserAgent (Get-UserAgent)
 			)
 			If ($IPAddress.AddressFamily -ne 'InterNetworkV6') {
 				$IPAddress = $null
@@ -75,7 +81,7 @@ Function Invoke-ip6.me {
 
 	Try {
 		$IPAddress = [IPAddress](
-			((Invoke-RestMethod -Uri "https://ip$($AddressFamily[3])only.me/api/" -UserAgent $UserAgent) -Split ',')[1]
+			((Invoke-RestMethod -Uri "https://ip$($AddressFamily[3])only.me/api/" -UserAgent (Get-UserAgent)) -Split ',')[1]
 		)
 	}
 	Catch {
@@ -96,7 +102,7 @@ Function Invoke-MyIP {
 
 	Try {
 		$IPAddress = [IPAddress](
-			Invoke-RestMethod -Uri "https://api$($AddressFamily[3]).my-ip.io/ip.txt" -UserAgent $UserAgent
+			Invoke-RestMethod -Uri "https://api$($AddressFamily[3]).my-ip.io/ip.txt" -UserAgent (Get-UserAgent)
 		)
 	}
 	Catch {

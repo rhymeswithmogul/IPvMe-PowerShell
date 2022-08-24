@@ -22,6 +22,7 @@ SERVICES AND TERMS OF USE
     and privacy policy.  If you do not consent, supply the -Service parameter to
     select one of the following supported services:
      - ip6.me (default)
+     - IPify
      - MyIP
 
 TROUBLESHOOTING NOTE
