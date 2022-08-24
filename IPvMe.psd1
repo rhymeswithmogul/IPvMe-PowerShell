@@ -85,8 +85,8 @@ AliasesToExport = @('Get-WANIPAddresses', 'Get-PublicIPAddress', 'Get-PublicIPAd
 
 # List of all files packaged with this module
 FileList = @(
-	'en-US/about_IPvMe.txt',
-	'en-US/IPvMe.help.xml',
+	'en-US/about_IPvMe.help.txt',
+	'en-US/IPvMe-help.xml',
 	'src/IPAddress.Format.ps1xml',
 	'src/IPAddress.Types.ps1xml',
 	'src/IPvMe.psm1',
