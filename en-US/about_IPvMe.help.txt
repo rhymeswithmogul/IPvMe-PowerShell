@@ -1,0 +1,48 @@
+﻿TOPIC
+    about_IPvMe
+
+SHORT DESCRIPTION
+    Find your device's public IP address.
+
+LONG DESCRIPTION
+    This module connects to Internet services to find your device's public IPv4
+    and/or IPv6 addresses.
+
+EXAMPLES
+    PS C:\> Get-WANIPAddress
+
+    Type  IP Address
+    ----  ----------
+    IPv4  192.0.2.1
+    IPv6  2001:db8::1
+
+SERVICES AND TERMS OF USE
+    By default, this cmdlet defaults to using the web site ip6.me to conduct its
+    testing.  By using this cmdlet, you inherently consent to their terms of use
+    and privacy policy.  If you do not consent, supply the -Service parameter to
+    select one of the following supported services:
+     - ip6.me (default)
+     - MyIP
+
+TROUBLESHOOTING NOTE
+    If your computer has multiple network interfaces with an Internet connection
+    that's working, note that this cmdlet will only test whichever one your OS's
+    network stack considers to be the primary.  Refer to your operating system's
+    documentation.
+
+    This cmdlet does not implement "Happy Eyeballs" and will test IPv4 and IPv6,
+    regardless of whether or not it is configured or working properly.   This is
+    by design, unless you specify the -IPv4Only or -IPv6Only parameters.
+
+SEE ALSO
+    https://ip6.me/docs/
+
+KEYWORDS
+   - IPv4
+   - IPv6
+   - What is my IP address
+   - WAN IP
+   - Public IP
+   - Internet IP
+   - VPN test
+   - Tor test

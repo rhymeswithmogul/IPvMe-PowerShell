@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+	<Type>
+		<Name>System.Net.IPAddress</Name>
+		<Members>
+			<ScriptProperty>
+				<Name>Type</Name>
+				<GetScriptBlock>
+					$this.AddressFamily -Replace 'nterNetwork','Pv4' -Replace '4V',''
+				</GetScriptBlock>
+			</ScriptProperty>
+			<AliasProperty>
+				<Name>IPAddress</Name>
+				<ReferencedMemberName>IPAddressToString</ReferencedMemberName>
+			</AliasProperty>
+			<MemberSet>
+				<Name>PSStandardMembers</Name>
+				<Members>
+					<PropertySet>
+						<Name>DefaultDisplayPropertySet</Name>
+						<ReferencedProperties>
+							<Name>Type</Name>
+							<Name>IPAddress</Name>
+						</ReferencedProperties>
+					</PropertySet>
+				</Members>
+			</MemberSet>
+		</Members>
+	</Type>
+</Types>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<ViewDefinitions>
+		<View>
+			<Name>WANIPAddress.IPAddress</Name>
+			<ViewSelectedBy>
+				<TypeName>System.Net.IPAddress</TypeName>
+			</ViewSelectedBy>
+			<TableControl>
+				<TableHeaders>
+					<TableColumnHeader>
+						<Label>Type</Label>
+						<Width>5</Width>
+					</TableColumnHeader>
+					<TableColumnHeader>
+						<Label>IP Address</Label>
+						<Width>39</Width>
+					</TableColumnHeader>
+				</TableHeaders>
+				<TableRowEntries>
+					<TableRowEntry>
+						<TableColumnItems>
+							<TableColumnItem>
+								<Alignment>Left</Alignment>
+								<ScriptBlock>$_.AddressFamily -Replace 'nterNetwork','Pv4' -Replace '4V',''</ScriptBlock>
+							</TableColumnItem>
+							<TableColumnItem>
+								<Alignment>Left</Alignment>
+								<PropertyName>IPAddressToString</PropertyName>
+							</TableColumnItem>
+						</TableColumnItems>
+					</TableRowEntry>
+				</TableRowEntries>
+			</TableControl>
+		</View>
+		<View>
+			<Name>WANIPAddress.IPAddress</Name>
+			<ViewSelectedBy>
+				<TypeName>System.Net.IPAddress</TypeName>
+			</ViewSelectedBy>
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+							<ListItem>
+								<Label>Type</Label>
+								<ScriptBlock>$_.AddressFamily -Replace 'nterNetwork','Pv4' -Replace '4V',''</ScriptBlock>
+							</ListItem>
+							<ListItem>
+								<Label>Address</Label>
+								<PropertyName>IPAddressToString</PropertyName>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+		<View>
+			<Name>WANIPAddress.IPAddress</Name>
+			<ViewSelectedBy>
+				<TypeName>System.Net.IPAddress</TypeName>
+			</ViewSelectedBy>
+			<WideControl>
+				<AutoSize/>
+				<WideEntries>
+					<WideEntry>
+						<WideItem>
+							<PropertyName>IPAddressToString</PropertyName>
+						</WideItem>
+					</WideEntry>
+				</WideEntries>
+			</WideControl>
+		</View>
+	</ViewDefinitions>
+</Configuration>
