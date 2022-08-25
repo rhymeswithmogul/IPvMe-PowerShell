@@ -1,7 +1,7 @@
 ---
 external help file: IPvMe-help.xml
 Module Name: IPvMe
-online version: https://www.github.com/rhymeswithmogul/IPvMe-PowerShell/man/en-US/Get-WanIpAddress.md
+online version: https://github.com/rhymeswithmogul/IPvMe-PowerShell/blob/main/man/en-US/Get-WanIpAddress.md
 schema: 2.0.0
 ---
 

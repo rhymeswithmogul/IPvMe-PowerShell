@@ -160,7 +160,7 @@ IPv6  2001:db8::100</dev:code>
 	<command:relatedLinks>
 	  <maml:navigationLink>
 		<maml:linkText>Online Version:</maml:linkText>
-		<maml:uri>https://www.github.com/rhymeswithmogul/IPvMe-PowerShell/man/en-US/Get-WanIpAddress.md</maml:uri>
+		<maml:uri>https://github.com/rhymeswithmogul/IPvMe-PowerShell/blob/main/man/en-US/Get-WanIpAddress.md</maml:uri>
 	  </maml:navigationLink>
 	  <maml:navigationLink>
 		<maml:linkText>Get-NetIPAddress</maml:linkText>
